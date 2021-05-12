@@ -1,7 +1,8 @@
 .mountains {
   --stack-size: 0;
+  --background-color: var(--gray-50);
 
-  background: var(--primary);
+  background-color: var(--background-color);
 }
 
 .site-foot {
