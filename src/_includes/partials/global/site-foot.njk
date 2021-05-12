@@ -1,25 +1,53 @@
-<footer role="contentinfo" class="[ site-foot ] [ pad-top-700 pad-bottom-900 ]">
-  <div class="wrapper">
-    <div class="[ site-foot__inner ] [ md:box-flex space-between align-start ]">
-      {% if site.shortDesc %}
-        <div>
-          <article class="[ site-foot__details ] [ sf-flow measure-compact ]">
-            <h2 class="font-serif text-600">{{ site.name }}</h2>
-            {{ site.shortDesc | markdownFilter | safe }}
-          </article>
+<div class="mountains">
+  {% include "assets/icons/mountains.svg" %}
+</div>
+ 
+<footer role="content-info" class="site-foot">
+  <div class="[ wrapper ] [ flow ]">
+    <div class="[ site-foot__inner ] [ auto-grid ]">
+      <article class="[ flow ]">
+        <h4>Our Mission</h4>
+        <p>To inspire active participation in the world outside through award-winning coverage of the sports, people, places, adventure, discoveries, health and fitness, gear and apparel, trends and events that make up an active lifestyle.</p>
+      </article>
+      <article class="[ flow ]">
+        <h4>Newsletter Sign Up</h4>
+        <p>Subscribe to our What You Missed newsletter for the top headlines from the outdoor world, in your inbox six days a week. Looking for something else? Check out <a href="#" class="link">our entire suite of free newsletters here</a>.</p>
+        <div class="[ site-foot__newsletter ] [ flow ]">
+          <input type="text" placeholder="Enter email address" />
+          <button type="submit" class="[ button ]">Sign Up</button>
+          <small>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" class="link">Privacy Policy</a> and <a href="https://policies.google.com/terms" class="link">Terms of Service</a> apply.</small>
         </div>
-      {% endif %}
-      <div>
-        {% set ariaLabel = 'footer navigation' %}
-        {% include "partials/components/nav.njk" %}
-        {# <theme-toggle></theme-toggle> #}
-      </div>
+      </article> 
+      <article class="[ flow ]">
+        <h4>Additional Links</h4>
+        <div class="[ site-foot-links ] [ smol-css-grid ]">
+          <div class="site-foot-links__item">
+            <a href="#">About</a>
+            <a href="#">Media Kit</a>
+            <a href="#">Careers</a>
+            <a href="#">Subscribers</a>
+            <a href="#">RSS</a>
+            <a href="#">Feedback</a>
+            <a href="#">Newsletters</a>
+          </div>
+          <div class="site-foot-links__item">
+            <a href="#">Sitemap</a>
+            <a href="#">About Our Ads</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Do Not Sell My Personal Information</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </article>
     </div>
-    <p class="[ site-foot__credit ] [ pad-top-900 ]">
-        Made with ♥ by <a href="https://sam-young.netlify.app" rel="external" target="_blank">Sam Young</a>.
-    </p>
-    <p class="[ site-foot__credit ]">
-        &copy; {{ helpers.currentYear() }} {{ site.name }} 
-    </p>
+
+    <hr class="site-foot-hr" />
+    <div class="[ site-foot__copy ]">
+      <div class="site-logo site-logo--footer">
+        <img src="/images/outside-logo.png" width="50" height="50" />
+      </div>
+      <p><small>&copy; {{ helpers.currentYear() }} Outside Integrated Media, LLC</small></p>
+    </div>
+
   </div>
 </footer>

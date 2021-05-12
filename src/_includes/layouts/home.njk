@@ -5,7 +5,6 @@
 {% block content %}
   <div class="wrapper">
     {{ content | safe }} 
-
-    {% include 'partials/components/read-more-cta.njk' %}
   </div>
+  {% include 'partials/components/read-more-cta.njk' %}
 {% endblock %}
