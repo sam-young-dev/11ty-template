@@ -27,6 +27,23 @@ module.exports = function(config) {
     config.addTransform("htmlmin", htmlMinTransform);
   }
 
+  // Custom collections
+  const now = new Date();
+  const livePosts = post => post.date <= now && !post.data.draft;
+  config.addCollection("posts", collection => {
+    return [
+      ...collection.getFilteredByGlob("./src/posts/*.md").filter(livePosts)
+    ].reverse();
+  });
+
+  config.addCollection("postFeed", collection => {
+    return [
+      ...collection.getFilteredByGlob("./src/posts/*.md").filter(livePosts)
+    ]
+      .reverse()
+      .slice(0, site.postsPerPage);
+  });
+
   // Passthrough
   config.addPassthroughCopy('src/css');
   config.addPassthroughCopy('src/images');

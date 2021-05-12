@@ -1,7 +1,11 @@
 {% extends 'layouts/base.njk' %}
 
+{% set postListItems = collections.postFeed %}
+
 {% block content %}
   <div class="wrapper">
-    {{ content | safe }}
+    {{ content | safe }} 
+
+    {% include 'partials/components/read-more-cta.njk' %}
   </div>
 {% endblock %}
