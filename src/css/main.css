@@ -1,0 +1,160 @@
+/* Start Reset */
+/* A modified version of my "modern reset" https://github.com/hankchizljaw/modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01s !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* End Reset */
+
+html {
+  /* declare vars */
+  --black: #333;
+
+  color: var(--black, #333);
+}
+
+/* Blocks */
+
+/* End Blocks */
+
+/* Utilities */
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
+  grid-gap: var(--auto-grid-gap, get-size('500'));
+}
+
+.dot-shadow {
+  --dot-shadow-size: 0.75rem;
+  position: relative;
+}
+
+.dot-shadow::before {
+  border-radius: 0.25rem;
+  content: '';
+  display: block;
+  width: calc(100% + calc(var(--dot-shadow-size) * 2));
+  height: calc(100% + calc(var(--dot-shadow-size) * 2));
+  background-image: url("data:image/svg+xml,%3Csvg width='6px' height='6px' viewBox='0 0 6 6' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle fill='%23CAC6B8' cx='1' cy='5' r='1'%3E%3C/circle%3E%3Ccircle fill='%23CAC6B8' cx='4' cy='2' r='1'%3E%3C/circle%3E%3C/svg%3E%0A");
+  position: absolute;
+  top: calc(var(--dot-shadow-size) * -1);
+  left: calc(var(--dot-shadow-size) * -1);
+  z-index: -1;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1.4rem);
+}
+
+.panel {
+  margin: 1.5rem 0;
+  padding: 1.5rem 0;
+
+  /* @include media-query('md') {
+     margin: 1.65rem 0;
+     padding: 1.65rem 0;
+  } */
+}
+
+.site-wrap {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/**
+ * WRAPPER
+ * Sets a max width, adds a consistent gutter and horizontally
+ * centers the contents
+ */
+.wrapper {
+  max-width: 70rem;
+  padding: 0 get-size('500');
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+/* End Utilities */

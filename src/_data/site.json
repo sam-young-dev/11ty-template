@@ -1,0 +1,13 @@
+{
+  "showThemeCredit": true,
+  "name": "Site Name",
+  "shortDesc": "This is a short description",
+  "url": "https://site.com",
+  "authorEmail": "",
+  "authorHandle": "",
+  "authorName": "Sam Young",
+  "enableThirdPartyComments": false,
+  "maxPostsPerPage": 5,
+  "paymentPointer": "",
+  "faviconPath": "/images/favicon.png"
+}

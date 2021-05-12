@@ -1,0 +1,10 @@
+{
+  "items": [
+    {
+      "text": "About",
+      "url": "/about",
+      "external": false,
+      "button": false
+    }
+  ]
+}
