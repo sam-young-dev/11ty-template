@@ -17,3 +17,22 @@
     --hr-width: 50%;
   }
 }
+
+.primary-heading {
+  color: #ffd204;
+  font-family: "HelveticaNeue",Arial,Helvetica,Geneva,sans-serif;
+  position: relative;
+  font-weight: bold;
+  line-height: 1.15;
+  font-size: 50px;
+  text-shadow: 1px 1px 0 #ed0505;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  // font-size: 70px;
+  font-size: var(--step-5);
+}
+
+.text-center {
+  text-align: center;
+}

@@ -1,7 +1,7 @@
 {% extends 'layouts/base.njk' %}
 
 {% block content %}
-<div class="[ post ] [ wrap ]">
+<div class="[ post ] [ wrap ] [ flow ]">
   <article class="[ prose insulate additive-spacing ]">
     <header>
       <h1>{{ title }}</h1>
@@ -18,12 +18,10 @@
     </header>
     {{ content | safe }}
   </article>
-
-  <div class="[ hr thin ] [ insulate ]"></div> 
   
   <footer class="post-footer">
     {% if tags %}  
-    <h5 class="post-tag-heading">Filed To:</h5>
+    <p class="post-tag-heading">Filed To:</p>
     <ul class="post-tags">
       {% for item in tags %} 
       <li class="post-tag"> 

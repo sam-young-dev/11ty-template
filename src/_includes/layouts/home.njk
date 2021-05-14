@@ -3,6 +3,24 @@
 {% set postListItems = collections.postFeed %}
 
 {% block content %} 
+ 
+<header class="hero"> 
+  <div class="hero__content">
+    <img src="/images/outside.svg" alt="Outside Online Logo">
+    <p>Today's Stories</p>
+    <ul>
+      {% for post in postListItems %}
+      <li class="hero-post-item">
+        <a class="hero-post-item__link" href={{ post.url }}>{{ post.data.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <img class="hero__img" src={{ heroImage.src }} alt={{ heroImage.alt }} />
+</header>
+ 
+<div class="primary-heading text-center">Latest</div> 
+
 <div class="wrap prose insulate additive-spacing">
   <h1>This is a large heading lorem ipsum dolor</h1>
   <p>
