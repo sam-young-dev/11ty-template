@@ -1,51 +1,35 @@
 {% extends 'layouts/base.njk' %}
 
-{% set authorName = author if author else 
-  site.authorName %}
-{% set introSummary %}
-<div class="l-stack">
-  {% if description %}
-    <p class="post-description">{{ description | safe }}</p>
-  {% endif %}
-  <p class="post-meta">
-    {% if date %}
-      Posted by {{ authorName }}
-      on <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | dateFilter }}</time>
-    {% endif %} (about a {{ helpers.getReadingTime(content) }} minute read).
-  </p>
-</div>
-{% endset %}
-
 {% block content %}
-  <div class="l-stack">
-    <article class="h-entry t-page" class="l-container">
-      <div class="l-stack l-stack--large">
-        {% include "partials/components/post-intro.njk" %}
-        <div class="l-container l-measure">
-          <div class="l-stack" >
-            {{ content | safe }}
-          </div>
-        </div>
-      </div>
-    </article>
-    <div class="l-container">
-      <footer class="l-stack">
-        {% if tags %}
-          <h2>Tags</h2>
-        {% endif %}
-        <div class="l-post-footer">
-          {% if tags %}
-            <ul class="l-post-tags">
-              {% for item in tags %}
-                <li>
-                  <a class="post-tag" href="/tags/{{ item }}">{{ item }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-
-        </footer>
-      </div>
-    </div>
-  </div>
+<div class="[ post ] [ wrap ]">
+  <article class="[ prose insulate additive-spacing ]">
+    <header>
+      <h1>{{ title }}</h1>
+      {% if description %}
+      <p class="post-description">{{ description | safe }}</p>
+      {% endif %}
+      <p class="post-meta">
+        {% if date %}
+        Posted by {{ author }}
+        on <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | dateFilter }}</time>
+        {% endif %} (about a {{ helpers.getReadingTime(content) }} minute read).
+      </p>
+      <div class="hr"></div>
+    </header>
+    {{ content | safe }}
+  </article>
+  
+  <footer class="post-footer">
+    {% if tags %}  
+    <h5 class="post-tag-heading">Filed To:</h5>
+    <ul class="post-tags">
+      {% for item in tags %} 
+      <li class="post-tag"> 
+        <a class=" link" href="/tags/{{ item }}">{{ item }}</a>
+      </li> 
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </footer>
+</div>
 {% endblock %}
