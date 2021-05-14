@@ -1,6 +1,7 @@
 {% extends 'layouts/base.njk' %}
 
 {% set postListItems = collections.postFeed %}
+{% set posts = collections.posts %}
 
 {% block content %} 
  
@@ -21,33 +22,19 @@
  
 <div class="primary-heading text-center">Latest</div> 
 
-<div class="wrap prose insulate additive-spacing">
-  <h1>This is a large heading lorem ipsum dolor</h1>
-  <p>
-    This text is one step up the scale from body size. Lorem ipsum dolor sit
-    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-    labore.
-  </p>
-  <p>
-    This is body copy lorem ipsum dolor sit amet, consectetur adipiscing
-    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum.
-  </p>
-  <h2>This is an inline heading with top and bottom spacing</h2>
+<div class="post-list">
+  <ul>
+    {% for post in posts %}
+    <li class="post-list__item">
+      <p>{{ post.data.tags[0] }}</p>
+      <h1>{{ post.data.title }}</h1>
+      <time class="post-stack-date" datetime="{{ post.date | w3DateFilter }}">{{ post.date | dateFilter }}</time>
 
-  <p>
-    This is body copy duis aute irure dolor in reprehenderit in voluptate
-    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-    occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-    mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    laboris nisi ut aliquip ex ea commodo consequat.
-  </p>
+      <p>{{ post.data.author }}</p>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
+
 {% include 'partials/components/read-more-cta.njk' %}
 {% endblock %}
