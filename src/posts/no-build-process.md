@@ -1,5 +1,8 @@
 ---
 title: Where is the build process?
+thumbnailImage: 
+  src: /images/bhutan-monks_s.webp
+  alt: Van cooking kitchen
 author: Chase Brush
 date: "2019-10-31"
 description: "Supermaya wraps all the build processes into Eleventy itself."

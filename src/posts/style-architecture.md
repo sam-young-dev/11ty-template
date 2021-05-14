@@ -1,5 +1,8 @@
 ---
 title: Style architecture
+thumbnailImage: 
+  src: /images/falls_s.webp
+  alt: Van cooking kitchen
 author: Svati Kirsten Narula
 date: "2019-10-29"
 description: "A short post about the approach to CSS architecture on this project"

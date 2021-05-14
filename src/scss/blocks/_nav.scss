@@ -17,7 +17,7 @@
     }
 
     &-item {
-      font-family: "HelveticaNeue", Arial, Helvetica, Geneva, sans-serif;
+      font-family: var(--font-sans);
       text-transform: uppercase;
     }
   }

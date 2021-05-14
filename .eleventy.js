@@ -1,5 +1,6 @@
 // Import filters
-const dateFilter = require('./src/filters/date-filter.js');
+const longDateFilter = require('./src/filters/long-date-filter.js');
+const shortDateFilter = require('./src/filters/short-date-filter.js');
 const markdownFilter = require('./src/filters/markdown-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 
@@ -13,7 +14,8 @@ const site = require("./src/_data/site.json");
 
 module.exports = function(config) {
   // Filters
-  config.addFilter('dateFilter', dateFilter);
+  config.addFilter('longDateFilter', longDateFilter);
+  config.addFilter('shortDateFilter', shortDateFilter);
   config.addFilter('markdownFilter', markdownFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
 

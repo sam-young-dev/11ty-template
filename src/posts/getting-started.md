@@ -1,12 +1,14 @@
 ---
-title: Getting started
-author: Martin Fritz Huber
-date: "2019-11-01"
-description: "Supermaya is an Eleventy starter kit designed to help you add rich features to a blog or website without the need for a complicated build process."
+title: How to Make the Most of Your Van’s Kitchen
+thumbnailImage: 
+  src: /images/cooking-kitchen-van_s.webp
+  alt: Van cooking kitchen
+author: Hannah Selinger
+date: "2021-05-14"
+description: "Gourmet meals on the road start with the right ingredients and prep"
 tags:
-  - demo-content
+  - culture
   - sample-post
-  - blog
 ---
 
 It comes with all the blog standard features:

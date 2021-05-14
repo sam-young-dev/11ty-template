@@ -5,6 +5,7 @@
   --secondary-glare: #b8272f;
   --secondary: #9b1e25;
   --secondary-shade: #86181e;
+  --tertiary: #ed0505;
 
   --selection: #b3d4fc;
 
@@ -32,6 +33,9 @@
   --step-3: clamp(1.73rem, 1.26rem + 2.35vw, 2.93rem);
   --step-4: clamp(2.07rem, 1.45rem + 3.10vw, 3.66rem);
   --step-5: clamp(2.49rem, 1.67rem + 4.08vw, 4.58rem);
+
+  --font-sans: "HelveticaNeue", Arial, Helvetica, Geneva, sans-serif;
+  --font-serif: Georgia, serif;
 }
 
 body {
@@ -41,7 +45,7 @@ body {
   color: var(--gray-800);
   background: var(--gray-50);
   background: #F0F0F0;
-  font: 400 var(--step--1) / 1.5 'source_serif', Georgia, serif;
+  font: 400 var(--step--1) / 1.5 'source_serif', var(--font-serif);
 }
 
 h1,
@@ -54,7 +58,7 @@ h4 {
 }
 
 h1 {
-  font-size: var(--step-4);;
+  font-size: var(--step-4);
 }
 
 h2 {

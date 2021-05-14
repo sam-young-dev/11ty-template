@@ -11,7 +11,7 @@
       <p class="post-meta">
         {% if date %}
         Posted by {{ author }}
-        on <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | dateFilter }}</time>
+        on <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | longDateFilter }}</time>
         {% endif %} (about a {{ helpers.getReadingTime(content) }} minute read).
       </p>
       <div class="hr"></div>

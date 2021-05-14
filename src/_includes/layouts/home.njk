@@ -19,22 +19,31 @@
   </div>
   <img class="hero__img" src={{ heroImage.src }} alt={{ heroImage.alt }} />
 </header>
- 
+
 <div class="primary-heading text-center">Latest</div> 
-
-<div class="post-list">
-  <ul>
+ 
+<!-- <div class=""> -->
+  <ul class="[ post-list ] [ flow ]">
     {% for post in posts %}
-    <li class="post-list__item">
-      <p>{{ post.data.tags[0] }}</p>
-      <h1>{{ post.data.title }}</h1>
-      <time class="post-stack-date" datetime="{{ post.date | w3DateFilter }}">{{ post.date | dateFilter }}</time>
-
-      <p>{{ post.data.author }}</p>
-    </li>
+    <div class="post-list__wrapper">
+      <img class="image" src={{ post.data.thumbnailImage.src }} alt={{ post.data.thumbnailImage.alt }}>
+      <div class="content">
+        <article class="post-list__item">
+          <p class="tag">{{ post.data.tags[0] }}</p>
+          <h3 class="heading">{{ post.data.title }}</h3>
+          <p class="description">{{ post.data.description }}</p>
+ 
+          <div class="post-meta">
+            <p class="author">{{ post.data.author }}</p>
+            <time class="date" datetime="{{ post.date | w3DateFilter }}">{{ post.date | shortDateFilter }}</time>
+          </div>
+        </article>
+        <div class="hr"></div>
+      </div>
+    </div>
     {% endfor %}
   </ul>
-</div>
+<!-- </div> -->
 
 {% include 'partials/components/read-more-cta.njk' %}
 {% endblock %}
