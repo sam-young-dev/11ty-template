@@ -5,45 +5,43 @@
 
 {% block content %} 
  
-<header class="hero"> 
-  <div class="hero__content">
-    <img src="/images/outside.svg" alt="Outside Online Logo">
-    <p>Today's Stories</p>
-    <ul>
-      {% for post in postListItems %}
-      <li class="hero-post-item">
-        <a class="hero-post-item__link" href={{ post.url }}>{{ post.data.title }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <img class="hero__img" src={{ heroImage.src }} alt={{ heroImage.alt }} />
-</header>
+<div class="flow">
+  <header class="hero"> 
+    <div class="hero__content">
+      <img src="/images/outside.svg" alt="Outside Online Logo">
+      <p>Today's Stories</p>
+      <ul>
+        {% for post in postListItems %}
+        <li class="hero-post-item">
+          <a class="hero-post-item__link" href={{ post.url }}>{{ post.data.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <img class="hero__img" src={{ heroImage.src }} alt={{ heroImage.alt }} />
+  </header>
 
-<div class="primary-heading text-center">Latest</div> 
- 
-<!-- <div class=""> -->
-  <ul class="[ post-list ] [ flow ]">
+  {% include 'partials/components/section-intro.njk' %}
+
+  <div class="[ post-list ] [ flow ]">
     {% for post in posts %}
-    <div class="post-list__wrapper">
+    <div class="post-list__item">
       <img class="image" src={{ post.data.thumbnailImage.src }} alt={{ post.data.thumbnailImage.alt }}>
       <div class="content">
-        <article class="post-list__item">
-          <p class="tag">{{ post.data.tags[0] }}</p>
-          <h3 class="heading">{{ post.data.title }}</h3>
-          <p class="description">{{ post.data.description }}</p>
- 
-          <div class="post-meta">
-            <p class="author">{{ post.data.author }}</p>
-            <time class="date" datetime="{{ post.date | w3DateFilter }}">{{ post.date | shortDateFilter }}</time>
-          </div>
-        </article>
+        <p class="tag">{{ post.data.tags[0] }}</p>
+        <h3 class="heading">{{ post.data.title }}</h3>
+        <p class="description">{{ post.data.description }}</p>
+
+        <div class="post-meta">
+          <p class="author">{{ post.data.author }}</p>
+          <time class="date" datetime="{{ post.date | w3DateFilter }}">{{ post.date | shortDateFilter }}</time>
+        </div>
         <div class="hr"></div>
       </div>
     </div>
     {% endfor %}
-  </ul>
-<!-- </div> -->
-
-{% include 'partials/components/read-more-cta.njk' %}
+  </div>
+  
+  {% include 'partials/components/read-more-cta.njk' %}
+</div>
 {% endblock %}

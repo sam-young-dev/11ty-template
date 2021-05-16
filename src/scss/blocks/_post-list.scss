@@ -1,56 +1,56 @@
 .post-list {
-  border-top: 3px solid var(--primary);
 
-  &__wrapper {
+  &__item {
     display: flex;
 
     .image {
       width: 12rem;
       margin-right: var(--step-0);
     }
-  }
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .hr {
-      --hr-color: var(--gray-300);
-      --hr-height: .3px;
-      --hr-width: 16rem;
-      overflow: hidden;
-    }
-  }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family: var(--font-sans);
+      max-width: 45ch;
   
-  &__item {
-    font-family: var(--font-sans);
-    max-width: 45ch;
-
-
+      .hr {
+        --hr-color: var(--gray-300);
+        --hr-height: .3px;
+        --hr-width: 16rem;
+        overflow: hidden;
+      }
+    }
+    
+    &__item {
+      font-family: var(--font-sans);
+      max-width: 45ch;
+    }
+  
     .tag {
       font-size: var(--step--3);
       font-weight: bold;
       text-transform: uppercase;
       color: var(--gray-500);
     }
-
+  
     .heading {
       font-family: var(--font-serif);
       margin: 0;
       margin: var(--step--5) 0;
     }
-
+  
     .description {
       font-size: var(--step--2);
       color: var(--gray-600);
       margin-bottom: var(--step--2);
     }
-
+  
     .post-meta {
       display: flex;
       font-size: var(--step--3);
-
+  
       .author {
         font-weight: 600;
         margin-right: var(--step--1);
