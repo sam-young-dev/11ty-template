@@ -1,14 +1,19 @@
 {% extends 'layouts/base.njk' %}
 
 {% block content %}
-<div class="[ post ] [ wrap ] [ flow ]">
-  <article class="[ prose insulate additive-spacing ]">
+<div class="[ post ] [ wrapper ] [ flow ]">
+  <div class="[ prose insulate additive-spacing ]">
     <header>
-      <h1>{{ title.short }}</h1>
+      <h2 class="post__heading">{{ title.short }}</h2>
       {% if description %}
-      <p class="post-description">{{ description | safe }}</p>
+      <p class="post__description">{{ description | safe }}</p>
       {% endif %}
-      <p class="post-meta">
+
+      <div class="hero">
+        <img class="hero__img" src={{ heroImage.src }} alt={{ heroImage.alt }} />
+      </div>
+
+      <p class="post__meta">
         {% if date %}
         Posted by {{ author }}
         on <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | longDateFilter }}</time>
@@ -16,10 +21,12 @@
       </p>
       <div class="hr"></div>
     </header>
-    {{ content | safe }}
-  </article>
-  
-  <footer class="post-footer">
+    <div class="[ post__content ] [ wrap ]">
+      {{ content | safe }}
+    </div>
+  </div>
+ 
+  <footer class="[ post-footer ] [ wrap ]">
     {% if tags %}  
     <p class="post-tag-heading">Filed To:</p>
     <ul class="post-tags">
@@ -31,5 +38,6 @@
     </ul>
     {% endif %}
   </footer>
+  <p class="attribution">Lead Photo: {{ heroImage.attribution }}</p>
 </div>
 {% endblock %}

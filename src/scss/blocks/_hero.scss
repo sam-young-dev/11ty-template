@@ -1,20 +1,10 @@
-$background-color: #244435;
-
-$primary: black;
-$secondary: #2ba27c;
-$support: #ffa000;
-
-@function svgColor($color) {
-  @return "%23" + str-slice("#{$color}", 2, -1);
-}
-
 .hero {
   display: grid;
   grid-template-areas: "hero";
   place-items: center;
   height: var(--height, 90vh);
   max-height: 600px;
-  background-color: rgba($primary, 0.5);
+  background-color: var(--hero-background-color);
   overflow: hidden;
 
   > * {

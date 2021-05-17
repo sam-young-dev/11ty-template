@@ -7,7 +7,7 @@
 
 {% block content %} 
 
-<div class="flow">
+<div class="[ home ] [ flow ]">
   <header class="hero">
     <div class="hero__content">
       <img src="/images/outside.svg" alt="Outside Online Logo">
@@ -15,7 +15,7 @@
       <ul>
         {% for post in postListItems %}
         <li class="hero-post-item">
-          <a class="hero-post-item__link" href={{ post.url }}>{{ post.data.title }}</a>
+          <a class="hero-post-item__link" href={{ post.url }}>{{ post.data.title.short }}</a>
         </li>
         {% endfor %}
       </ul>
