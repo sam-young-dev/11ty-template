@@ -1,7 +1,6 @@
 ---
-title: 
-  long: The Case for Buying New Adventuremobiles
-  short: The Case for Buying New Adventuremobiles
+title: The Case for Buying New Adventuremobiles
+longTitle: The Case for Buying New Adventuremobiles
 thumbnailImage: 
   src: /images/new-cars-safer_h.webp
   alt: Gas pump

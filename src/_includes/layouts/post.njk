@@ -4,11 +4,11 @@
 <div class="[ post ] [ wrapper ] [ flow ]">
   <div class="[ prose insulate additive-spacing ]">
     <header>
-      <h2 class="post__heading">{{ title.short }}</h2>
+      <h2 class="post__heading">{{ title }}</h2>
       {% if description %}
       <p class="post__description">{{ description | safe }}</p>
       {% endif %}
-
+ 
       <div class="hero">
         <img class="hero__img" src={{ heroImage.src }} alt={{ heroImage.alt }} />
       </div>
@@ -26,18 +26,20 @@
     </div>
   </div>
  
-  <footer class="[ post-footer ] [ wrap ]">
-    {% if tags %}  
-    <p class="post-tag-heading">Filed To:</p>
-    <ul class="post-tags">
-      {% for item in tags %} 
-      <li class="post-tag"> 
-        <a class=" link" href="/{{ item }}">{{ item }}</a>
-      </li> 
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </footer>
-  <p class="attribution">Lead Photo: {{ heroImage.attribution }}</p>
+  <div class="wrap">
+    <footer class="post__footer">
+      {% if tags %}  
+      <p class="post-tag-heading">Filed To:</p>
+      <ul class="post-tags">
+        {% for item in tags %} 
+        <li class="post-tag"> 
+          <a class=" link" href="/{{ item }}">{{ item }}</a>
+        </li> 
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </footer>
+    <p class="attribution">Lead Photo: {{ heroImage.attribution }}</p>
+  </div>
 </div>
 {% endblock %}

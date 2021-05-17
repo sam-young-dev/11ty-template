@@ -1,7 +1,6 @@
 ---
-title: 
-  long: You Need a Better Dog Barrier
-  short: You Need a Better Dog Barrier
+title: You Need a Better Dog Barrier
+longTitle: You Need a Better Dog Barrier
 thumbnailImage: 
   src: /images/dog-seats_h.webp
   alt: Gas pump

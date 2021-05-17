@@ -1,4 +1,6 @@
 .post {
+  margin-top: var(--step-1);
+
   &__heading {
     margin-bottom: 0;
     margin-bottom: .2rem;
@@ -7,8 +9,9 @@
 
   &__description {
     font-size: var(--step-0);
-    color: var(--gray-700);
+    color: var(--gray-500);
     line-height: 1.4;
+    max-width: 45ch;
   }
 
   .hero {
@@ -23,34 +26,33 @@
 
   &__content {
     font-size: var(--step--1);
-    // max-width: 65ch;
   }
   
-  .post-footer {
+  &__footer {
     display: flex;
     align-items: center;
-  }
 
-  .post-tags {
-    display: flex;
-  }
-
-  .post-tag-heading {
-    font-weight: bold;
-    font-size: var(--step--2);
-    margin-right: var(--step--4);
-  }
-
-  .post-tag {
-    font-size: var(--step--2);
-
-    &:not(:last-child):after {
-      content: "•";
-      margin: 0;
-      padding: 0;
-
-      margin: 0 var(--step--5);
-      color: var(--gray-500);
+    .post-tags {
+      display: flex;
+    }
+  
+    .post-tag-heading {
+      font-weight: bold;
+      font-size: var(--step--2);
+      margin-right: var(--step--4);
+    }
+  
+    .post-tag {
+      font-size: var(--step--2);
+  
+      &:not(:last-child):after {
+        content: "•";
+        margin: 0;
+        padding: 0;
+  
+        margin: 0 var(--step--5);
+        color: var(--gray-500);
+      }
     }
   }
 
@@ -62,5 +64,6 @@
     font-family: var(--font-sans);
     font-size: var(--step--3);
     color: var(--gray-500);
+    margin-top: var(--step--1);
   }
 }

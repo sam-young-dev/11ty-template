@@ -1,7 +1,6 @@
 ---
-title: 
-  long: Fueling Up for Adventures Has Never Tasted This Good
-  short: The Best Fuel of 2021
+title: The Best Fuel of 2021
+longTitle: Fueling Up for Adventures Has Never Tasted This Good
 thumbnailImage: 
   src: /images/sbg-fitness-fuel_h.webp
   alt: sbg-fitness-fuel

@@ -15,7 +15,7 @@
       <ul>
         {% for post in postListItems %}
         <li class="hero-post-item">
-          <a class="hero-post-item__link" href={{ post.url }}>{{ post.data.title.short }}</a>
+          <a class="hero-post-item__link" href={{ post.url }}>{{ post.data.longTitle }}</a>
         </li>
         {% endfor %}
       </ul>
