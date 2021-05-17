@@ -26,11 +26,6 @@
 .hr {
   border: var(--hr-height, 3px) solid var(--hr-color, var(--gray-600));
   width: var(--hr-width, var(--step-4));
-
-  &.thin {
-    --hr-height: .5px;
-    --hr-width: 50%;
-  }
 }
 
 .text-center {

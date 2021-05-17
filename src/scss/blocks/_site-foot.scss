@@ -1,13 +1,6 @@
-.mountains {
-  --stack-size: 0;
-  // --background-color: var(--gray-50);
-  --background-color: var(--primary);
-
-  background-color: var(--background-color);
-}
-
 .site-foot {
   --stack-size: 0;
+  --wrapper-max-width: 75rem;
 
   color: var(--gray-100);
   background-color: black;
@@ -15,7 +8,7 @@
   margin-top: calc(2.5rem + 60px);
   position: relative;
   z-index: 99;
-  // font-size: var(--font-sm);
+  font-size: var(--step--2);
 
   &::before {
     content: "";
@@ -31,12 +24,6 @@
     background-image: url(/images/mountains.svg);
   }
 
-  &__inner {
-    color: #fff;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
   a {
     color: var(--gray-100);
     text-decoration: none;
@@ -46,12 +33,20 @@
     }
   }
 
-  .link {
-    text-decoration-color: whitesmoke;
+  &__inner {
+    --auto-grid-min-size: 30ch;
+    --auto-grid-gap: 2rem;
+
+    color: whitesmoke;
+
+    .heading {
+      font-size: var(--step-0);
+      font-weight: 900;
+    }
   }
 
-  &__inner {
-    --gap: 3rem;
+  .link {
+    text-decoration-color: whitesmoke;
   }
 
   &__newsletter {
@@ -62,38 +57,53 @@
 
     input {
       color: whitesmoke;
+      background-color: black;
       border: 1px solid whitesmoke;
-      padding: .3rem 1rem;
+      padding: .7rem 1rem;
     }
 
     small {
       --flow-space: .5rem;
     }
+
+    .button {
+      cursor: pointer;
+    }
   }
 
   .site-foot-links {
-    --gap: .2rem;
+    --auto-grid-min-size: 12ch;
 
     &__item {
       display: flex;
       flex-direction: column;
+      flex-wrap: nowrap;
     }
   }
 
-  .site-foot-hr {
-    color: whitesmoke;
+  .hr {
+    --hr-height: .5px;
+    --hr-width: 100%;
+    --hr-color: whitesmoke;
   }
 
-  &__copy {
-    // --auto-grid-min-size: 10rem;
-    // --auto-grid-gap: .5rem;
+  &__credits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: flex-end;
+    * + * {
+      margin-left: var(--step-2);
+    }
+
+    .site-logo {
+      width: 9rem;
+    }
+
+    .site-foot-copyright {
+      font-family: var(--font-sans);
+      font-size: var(--step--3);
+      white-space: nowrap;
+    }
   }
-}
-
-.site-logo {
-  width: 8rem;
 }

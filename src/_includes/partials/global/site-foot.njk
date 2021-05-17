@@ -1,14 +1,14 @@
 <footer role="content-info" class="site-foot">
-  <div class="[ wrapper ] [ flow ] [ additive-spacing ]">
+  <div class="[ wrapper ] [ flow ] [  ]">
     <div class="[ site-foot__inner ] [ auto-grid ]">
       <article class="[ flow ]">
-        <h3>Our Mission</h3>
+        <h3 class="heading">Our Mission</h3>
         <p>To inspire active participation in the world outside through award-winning coverage of the sports, people,
           places, adventure, discoveries, health and fitness, gear and apparel, trends and events that make up an active
           lifestyle.</p>
-      </article>
+      </article> 
       <article class="[ flow ]">
-        <h3>Newsletter Sign Up</h3>
+        <h3 class="heading">Newsletter Sign Up</h3>
         <p>Subscribe to our What You Missed newsletter for the top headlines from the outdoor world, in your inbox six
           days a week. Looking for something else? Check out <a href="#" class="link">our entire suite of free
             newsletters here</a>.</p>
@@ -21,8 +21,8 @@
         </div>
       </article>
       <article class="[ flow ]">
-        <h3>Additional Links</h3>
-        <div class="[ site-foot-links ] [ smol-css-grid ]">
+        <h3 class="heading">Additional Links</h3>
+        <div class="[ site-foot-links ] [ auto-grid ]">
           <div class="site-foot-links__item">
             <a href="#">About</a>
             <a href="#">Media Kit</a>
@@ -41,13 +41,11 @@
           </div>
         </div>
       </article>
-    </div>
-    <hr class="site-foot-hr" />
-    <div class="[ site-foot__copy ]">
-      <div class="site-logo site-logo--footer">
-        <img src="/images/outside-logo.png" width="50" height="50" />
-      </div>
-      <p><small>&copy; {{ helpers.currentYear() }} Outside Integrated Media, LLC</small></p>
+    </div> 
+    <div class="site-foot__credits">
+      <img src="/images/outside.svg" alt="outside logo" class="site-logo" />
+      <div class="hr"></div>
+      <p class="site-foot-copyright">&copy; {{ helpers.currentYear() }} Outside Integrated Media, LLC</p>
     </div>
   </div>
-</footer>
+</footer> 
