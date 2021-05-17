@@ -27,7 +27,7 @@
     "html-minifier": "^4.0.0",
     "lozad": "^1.14.0",
     "memfs": "^3.1.2",
-    "netlify-cli": "^3.29.4",
+    "netlify-cli": "^3.29.16",
     "node-sass": "^6.0.0",
     "slugify": "^1.4.0",
     "snarkdown": "^1.2.2",

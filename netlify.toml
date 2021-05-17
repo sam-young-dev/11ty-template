@@ -1,0 +1,7 @@
+[build]
+  environment = { NODE_VERSION = "12.0.0" }
+  command = "npm run build"
+  functions = "functions"
+  publish = "dist"
+
+  ## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/
