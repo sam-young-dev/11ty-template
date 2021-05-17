@@ -1,19 +1,32 @@
 .read-more {
+  --auto-grid-min-size: 15ch;
+
   background: var(--primary);
   padding: 1.5rem 0 3rem 0;
   
   .read-more-post {
     background: whitesmoke;
     border: 1px solid var(--secondary);
-    padding: 1rem;
+    padding: .5rem .5rem .5rem 1.4rem; 
     text-decoration: none;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &:hover {
-      color: var(--secondary);
+      -webkit-transform: scale(1.025);
+      transform: scale(1.025);
     }
 
+    .heading {
+      font-size: var(--step--2);
+    }
+    
     &__author {
-      font-size: var(--font-sm);
+      margin-top: 1rem;
+      font-family: var(--font-sans);
+      font-size: var(--step--3);
       color: var(--gray-500);
     }
   }
