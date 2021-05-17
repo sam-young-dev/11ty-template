@@ -1,0 +1,35 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+<div class="[ post ] [ wrap ] [ flow ]">
+  <article class="[ prose insulate additive-spacing ]">
+    <header>
+      <h1>{{ title }}</h1>
+      {% if description %}
+      <p class="post-description">{{ description | safe }}</p>
+      {% endif %}
+      <p class="post-meta">
+        {% if date %}
+        Posted by {{ author }}
+        on <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | longDateFilter }}</time>
+        {% endif %} (about a {{ helpers.getReadingTime(content) }} minute read).
+      </p>
+      <div class="hr"></div>
+    </header>
+    {{ content | safe }}
+  </article>
+  
+  <footer class="post-footer">
+    {% if tags %}  
+    <p class="post-tag-heading">Filed To:</p>
+    <ul class="post-tags">
+      {% for item in tags %} 
+      <li class="post-tag"> 
+        <a class=" link" href="/tags/{{ item }}">{{ item }}</a>
+      </li> 
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </footer>
+</div>
+{% endblock %}

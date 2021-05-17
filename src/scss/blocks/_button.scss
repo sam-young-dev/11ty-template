@@ -1,0 +1,64 @@
+.button {
+  @extend .radius;
+
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background: var(--primary);
+  color: black;
+  // color: var(--secondary);
+  border: none;
+  text-decoration: none;
+  text-align: center;
+
+  // @include apply-utility('font', 'sans');
+  // @include apply-utility('weight', 'bold');
+
+  //make sure hover state trumps all variants
+  &:hover {
+    background: var(--primary-shade) !important;
+    // color: var(--secondary-shade) !important;
+  }
+
+  //add a ghost modifier
+  &[data-variant='ghost'] {
+    background: transparent;
+    color: var(--primary-glare);
+  }
+}
+
+.btn {
+  border: none;
+  background: #333;
+  background-color: rgb(51, 51, 51);
+  color: whitesmoke;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-style: normal;
+  text-decoration: none;
+  display: inline-block;
+  background-color: black;
+  letter-spacing: 3px;
+  cursor: pointer;
+  font-size: var(--step--3);
+  padding: 1rem 1.4rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #9b1e25 !important;
+    color: whitesmoke !important;
+  }
+
+  //add a ghost modifier
+  &[data-variant='ghost'] {
+    background: transparent;
+    color: var(--primary-glare);
+  }
+
+  &__arrow {
+    font-size: var(--step--1);
+    line-height: 0.5;
+    color: rgba(255,255,255,0.8);
+  }
+}

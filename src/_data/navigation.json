@@ -1,8 +1,44 @@
 {
   "items": [
     {
-      "text": "About",
-      "url": "/about",
+      "text": "Gear",
+      "url": "/gear",
+      "external": false,
+      "button": false
+    },
+    {
+      "text": "Adventure",
+      "url": "/adventure",
+      "external": false,
+      "button": false
+    },
+    {
+      "text": "Travel",
+      "url": "/travel",
+      "external": false,
+      "button": false
+    },
+    {
+      "text": "Culture",
+      "url": "/culture",
+      "external": false,
+      "button": false
+    },
+    {
+      "text": "Long Reads",
+      "url": "/long-reads",
+      "external": false,
+      "button": false
+    },
+    {
+      "text": "Video",
+      "url": "/video",
+      "external": false,
+      "button": false
+    },
+    {
+      "text": "Podcast",
+      "url": "/podcast",
       "external": false,
       "button": false
     }

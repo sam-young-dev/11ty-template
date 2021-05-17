@@ -1,0 +1,109 @@
+.site-foot {
+  --stack-size: 0;
+  --wrapper-max-width: 75rem;
+
+  color: var(--gray-100);
+  background-color: black;
+  padding: 2.5rem 0;
+  margin-top: calc(2.5rem + 60px);
+  position: relative;
+  z-index: 99;
+  font-size: var(--step--2);
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -60px;
+    height: 60px;
+    width: 100%;
+    background-repeat: repeat-x;
+    background-position: center top;
+    background-size: auto 60px;
+    background-image: url(/images/mountains.svg);
+  }
+
+  a {
+    color: var(--gray-100);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  &__inner {
+    --auto-grid-min-size: 30ch;
+    --auto-grid-gap: 2rem;
+
+    color: whitesmoke;
+
+    .heading {
+      font-size: var(--step-0);
+      font-weight: 900;
+    }
+  }
+
+  .link {
+    text-decoration-color: whitesmoke;
+  }
+
+  &__newsletter {
+    --flow-space: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    input {
+      color: whitesmoke;
+      background-color: black;
+      border: 1px solid whitesmoke;
+      padding: .7rem 1rem;
+    }
+
+    small {
+      --flow-space: .5rem;
+    }
+
+    .button {
+      cursor: pointer;
+    }
+  }
+
+  .site-foot-links {
+    --auto-grid-min-size: 12ch;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .hr {
+    --hr-height: .5px;
+    --hr-width: 100%;
+    --hr-color: whitesmoke;
+  }
+
+  &__credits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    * + * {
+      margin-left: var(--step-2);
+    }
+
+    .site-logo {
+      width: 9rem;
+    }
+
+    .site-foot-copyright {
+      font-family: var(--font-sans);
+      font-size: var(--step--3);
+      white-space: nowrap;
+    }
+  }
+}
