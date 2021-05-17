@@ -1,5 +1,5 @@
 --- 
-title: Tags 
+title: Tag
 pagination: 
   data: collections 
   size: 1
@@ -12,21 +12,21 @@ pagination:
     - tagList 
     - postFeed 
 addAllPagesToCollections: true 
-permalink: /tags/{{ tag }}/ 
+permalink: /{{ tag }}/
 ---
 
 {% extends 'layouts/base.njk' %}
 
 {# Intro content #}
-{% set introHeading %}Posts{% endset %}
+{% set introHeading = tag %}
+{% set includeDate = false %}
 
 {# Post list content #}
-{% set postListHeading %}Posts tagged: “{{ tag }}”{% endset %}
-{% set postListItems = collections[tag] %}
+{% set posts = collections[tag] %}
 
 {% block content %}
-  <div class="l-stack l-stack--large">
-    {% include "partials/components/intro.njk" %}
+  <div class="flow">
+    {% include 'partials/components/section-intro.njk' %}
     {% include "partials/components/post-list.njk" %}
     {% include "partials/components/pagination.njk" %}
   </div>

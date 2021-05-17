@@ -1,29 +1,26 @@
-{% set postListHeadingLevel = 'h3' if postListHeading else 
-  'h2' %}
-{% if postListItems.length %}
-  <section class="l-container l-measure">
-    <div class="l-stack">
-      {% if postListHeading %}
-        <h2 class="h4">{{ postListHeading }}</h2>
-      {% endif %}
-      <ul class="l-post-list" reversed>
-        {% for item in postListItems %}
-          <li class="post-stack-item">
-            <{{postListHeadingLevel}} class="h3">
-              <a href="{{ item.url }}" rel="bookmark">{{ item.data.title }}</a>
-            </{{postListHeadingLevel}}>
-            <p>
-              <time class="post-stack-date" datetime="{{ item.date | w3DateFilter }}">{{ item.date | mediumDateFilter }}</time>
-            </p>
-            <p>
-              {% if item.data.description %}
-                {{item.data.description}}
-                <a href="{{ item.url }}" aria-hidden="true" class="read-more">Read more</a>
-              {% endif %}
-            </p>
-          </li>
-        {% endfor %}
-      </ul>
+<div class="[ post-list ] [ wrapper flow ]">
+  {% for post in posts %}
+  <div class="post-list__item">
+    <a href={{ post.url }}>
+      <img class="image" src={{ post.data.thumbnailImage.src }} alt={{ post.data.thumbnailImage.alt }}>
+    </a> 
+    <div class="content">
+      {% if showTag %}
+      <p class="tag link-secondary">
+        <a href="/{{ post.data.tags[0] }}/">{{ post.data.tags[0] }}</a>
+      </p>
+      {% endif %} 
+      <h3 class="heading link-secondary">
+        <a href={{ post.url }}>{{ post.data.title }}</a>
+      </h3>
+      <p class="description">{{ post.data.description }}</p>
+
+      <div class="post-meta">
+        <p class="author">{{ post.data.author }}</p>
+        <time class="date" datetime="{{ post.date | w3DateFilter }}">{{ post.date | mediumDateFilter }}</time>
+      </div>
+      <div class="hr"></div>
     </div>
-  </section>
-{% endif %}
+  </div>
+  {% endfor %}
+</div>
