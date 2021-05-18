@@ -1,5 +1,8 @@
 <div class="[ post-list ] [ wrapper flow ]">
   {% for post in posts %}
+
+  {% set author = helpers.filterCollectionByKey(collections.people, post.data.authorKey) %}
+
   <div class="post-list__item">
     <div class="c-block__media">
       <a href={{ post.url }} class="c-block__media-link">
@@ -18,7 +21,7 @@
       <p class="description">{{ post.data.description }}</p>
 
       <div class="post-meta">
-        <p class="author">{{ post.data.author }}</p>
+        <p class="author">{{ author.data.name }}</p>
         <time class="date" datetime="{{ post.date | w3DateFilter }}">{{ post.date | mediumDateFilter }}</time>
       </div>
       <div class="hr"></div>

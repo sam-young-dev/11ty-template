@@ -8,7 +8,7 @@ heroImage:
   src: /images/new-cars-safer_h.webp
   alt: Gas pump
   attribution: Wes Siler
-author: Wes Siler
+authorKey: 2
 date: "2019-10-30"
 description: A monthly payment may be scary, but, man, it feels worth it when your loved one gets into a crash
 tags:

@@ -32,4 +32,17 @@ module.exports = {
 
     return response;
   },
+  /**
+   * Take a key and return back the item that matches.
+   * Note: item in the collection must have a key attribute in
+   * Front Matter
+   *
+   * @param {Array} collection 11ty collection
+   * @param {Number} key collection of key
+   * @returns {Array} result collection or empty
+   */
+   filterCollectionByKey(collection, key) {
+    const arrayItem = collection.filter(x => x.data.key === key);
+    return arrayItem[0];
+  }
 };

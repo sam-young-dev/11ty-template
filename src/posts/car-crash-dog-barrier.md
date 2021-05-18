@@ -8,7 +8,7 @@ heroImage:
   src: /images/dog-seats_h.webp
   alt: Gas pump
   attribution: Virginia McQueen
-author: Wes Siler
+authorKey: 2
 date: "2021-05-12"
 description: Vehicle seats are not designed to resist the force dogs or other cargo create during a crash, endangering not only their lives, but those of human occupants, too
 tags:

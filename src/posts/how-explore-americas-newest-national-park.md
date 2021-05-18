@@ -8,7 +8,7 @@ heroImage:
   src: /images/wv_nrg_h.webp
   alt: White water rafting in West Virginia
   attribution: Virginia McQueen
-author: Kelly Bastone
+authorKey: 3
 date: "2021-05-17"
 description: West Virginia’s New River Gorge has something for every kind of adventurer
 tags:

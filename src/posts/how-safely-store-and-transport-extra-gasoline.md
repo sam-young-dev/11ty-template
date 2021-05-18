@@ -8,7 +8,7 @@ heroImage:
   src: /images/gas_h.webp
   alt: Gas pump
   attribution: Elijah Nouvelage, Getty Images
-author: Wes Siler
+authorKey: 2
 date: "2021-05-13"
 description: In attempts to hoard fuel, panic buyers are taking dangerous shortcuts
 tags:

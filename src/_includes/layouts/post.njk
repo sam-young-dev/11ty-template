@@ -1,5 +1,7 @@
 {% extends 'layouts/base.njk' %}
 
+{% set author = helpers.filterCollectionByKey(collections.people, authorKey) %}
+
 {% block content %}
 <div class="[ post ] [ wrapper ] [ flow ]">
   <div class="[ prose insulate additive-spacing ]">
@@ -13,13 +15,35 @@
         <img class="hero__img" src={{ heroImage.src }} alt={{ heroImage.alt }} />
       </div>
 
-      <p class="post__meta">
+      <!-- <p class="post__meta">
         {% if date %}
         Posted by {{ author }}
         on <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | longDateFilter }}</time>
         {% endif %} (about a {{ helpers.getReadingTime(content) }} minute read).
       </p>
-      <div class="hr"></div>
+      <div class="hr"></div> -->
+
+      <div class="article__meta">
+        <div class="article__author font--sans text--xs">
+          <strong>
+            <div class="article__author-image rounded no-print">
+              <a href="#" class="author-link link--black lazyloaded" style="background-image: url('{{ author.data.image }}');">
+                <span class="visually-hidden">{{ author.data.name }}</span>
+              </a>
+            </div>
+            <a href="#" class="link--black">
+              <span itemprop="author" itemtype="https://schema.org/Person">
+                <span itemprop="name">{{ author.data.name }}</span>
+              </span>
+            </a>
+          </strong>
+        </div>
+        <hr>
+        <div class="article__date font--sans text--xs gray--dark">
+          <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | longDateFilter }}</time>
+        </div>
+      </div>
+
     </header>
     <div class="[ post__content ] [ wrap ]">
       {{ content | safe }}

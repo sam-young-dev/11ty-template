@@ -8,7 +8,7 @@ heroImage:
   src: /images/sbg-fitness-fuel_h.webp
   alt: sbg-fitness-fuel
   attribution: Courtesy the Companies
-author: Hayden Carpenter
+authorKey: 1
 date: "2021-05-10"
 description: "Real food for serious adventures"
 tags:
