@@ -1,5 +1,4 @@
 ---
-title: Home Page
 layout: layouts/home.njk
 heroImage:
   src: /images/jimmy.webp

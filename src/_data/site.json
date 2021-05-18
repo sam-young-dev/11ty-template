@@ -1,14 +1,14 @@
 {
   "showThemeCredit": true,
-  "name": "Site Name",
-  "shortDesc": "This is a short description",
-  "url": "https://site.com",
+  "name": "Outside Online",
+  "shortDesc": "Since 1977, Outside has been about one simple idea: to inspire active participation in the world outside.",
+  "url": "https://outside-online.netlify.app",
   "authorEmail": "",
   "authorHandle": "",
   "authorName": "Sam Young",
   "enableThirdPartyComments": false,
   "maxPostsPerPage": 5,
   "paymentPointer": "",
-  "faviconPath": "/images/favicon.png",
+  "faviconPath": "/images/manifest/favicon.ico",
   "criticalCSS": false
 }
