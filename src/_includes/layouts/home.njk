@@ -1,10 +1,11 @@
 {% extends 'layouts/base.njk' %}
 
+{% set featuredPosts = collections.featuredPosts %}
 {% set postListItems = collections.postFeed %}
 {% set introHeading = "Latest" %}
 {% set posts = collections.posts %}
 {% set showTag = true %}
-
+ 
 {% block content %} 
 
 <div class="[ home ] [ flow ]">
@@ -13,9 +14,9 @@
       <img src="/images/outside.svg" alt="Outside Online Logo">
       <p>Today's Stories</p>
       <ul>
-        {% for post in postListItems %}
+        {% for post in featuredPosts %}
         <li class="hero-post-item">
-          <a class="hero-post-item__link" href={{ post.url }}>{{ post.data.longTitle }}</a>
+          <a class="hero-post-item__link" href={{ post.url }}>{{ post.data.title }}</a>
         </li>
         {% endfor %}
       </ul>

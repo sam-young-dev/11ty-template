@@ -40,12 +40,20 @@ module.exports = function(config) {
     ].reverse();
   });
 
+  config.addCollection("featuredPosts", collection => {
+    return [
+      ...collection.getFilteredByGlob("./src/posts/*.md").filter(post => {
+        return post.date <= now && !post.data.draft && post.data.featured
+      })
+    ].reverse();
+  });
+
   config.addCollection("postFeed", collection => {
     return [
       ...collection.getFilteredByGlob("./src/posts/*.md").filter(livePosts)
     ]
-      .reverse()
-      .slice(0, site.postsPerPage);
+    .reverse()
+    .slice(0, site.postsPerPage);
   });
 
   // Returns a list of people ordered by filename

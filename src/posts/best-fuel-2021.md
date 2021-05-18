@@ -14,7 +14,7 @@ description: "Real food for serious adventures"
 tags:
   - gear
   - tools and tech
-featured: false
+featured: true
 comments: false
 claps: false
 bookmarks: false
