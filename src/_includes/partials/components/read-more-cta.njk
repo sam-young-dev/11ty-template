@@ -6,10 +6,13 @@
     </div>
 
     <div class="auto-grid">
-      {% for item in postListItems %}
-        <a href={{ item.url }} class="[ read-more-post ] [ link-secondary ]">
-          <h4 class="heading">{{ item.data.title }}</h4>
-          <p class="read-more-post__author">By: {{ item.data.author }}</p>
+      {% for post in postListItems %}
+
+      {% set author = helpers.filterCollectionByKey(collections.people, post.data.authorKey) %}
+
+        <a href={{ post.url }} class="[ read-more-post ] [ link-secondary ]">
+          <h4 class="heading">{{ post.data.title }}</h4>
+          <p class="read-more-post__author">By: {{ author.data.name }}</p>
         </a> 
       {% endfor %}
     </div>
