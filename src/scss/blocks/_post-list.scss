@@ -4,8 +4,17 @@
     display: flex;
 
     .image {
-      width: 12rem;
+      // width: 12rem;
       margin-right: var(--step-0);
+
+      object-fit: cover;
+      width: 14rem;
+      // height: var(--height, 90vh);
+      // Chrome no longer preventing growing beyond
+      // the header height with just the following
+      // height: 100%;
+      // width: 100%;
+      // z-index: -1;
     }
 
     .content {
@@ -61,4 +70,27 @@
       }
     }
   }
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100% !important;
+  height: auto;
+  border: 0;
+}
+
+.c-block__media a {
+  display: block;
+}
+
+.c-block__media {
+  max-width: clamp(90px, 190px, 190px);
+
+  margin-bottom: 0;
+  margin-right: var(--step-0);
+  position: relative;
+  overflow: hidden;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }

@@ -1,9 +1,11 @@
 <div class="[ post-list ] [ wrapper flow ]">
   {% for post in posts %}
   <div class="post-list__item">
-    <a href={{ post.url }}>
-      <img class="image" src={{ post.data.thumbnailImage.src }} alt={{ post.data.thumbnailImage.alt }}>
-    </a> 
+    <div class="c-block__media">
+      <a href={{ post.url }} class="c-block__media-link">
+        <img class="image" src={{ post.data.thumbnailImage.src }} alt={{ post.data.thumbnailImage.alt }}>
+      </a>
+    </div>
     <div class="content">
       {% if showTag %}
       <p class="tag link-secondary">
