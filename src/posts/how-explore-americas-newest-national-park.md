@@ -2,10 +2,10 @@
 title: How to Explore America’s Newest National Park
 longTitle: How to Explore America’s Newest National Park
 thumbnailImage: 
-  src: /images/wv_nrghero_s.webp
+  src: /images/posts/wv_nrghero_s.webp
   alt: White water rafting in West Virginia
 heroImage: 
-  src: /images/wv_nrg_h.webp
+  src: /images/posts/wv_nrg_h.webp
   alt: White water rafting in West Virginia
   attribution: Virginia McQueen
 authorKey: 3

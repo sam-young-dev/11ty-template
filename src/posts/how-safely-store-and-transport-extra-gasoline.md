@@ -2,10 +2,10 @@
 title: How to Safely Store and Transport Extra Gasoline
 longTitle: How to Safely Store and Transport Extra Gasoline
 thumbnailImage: 
-  src: /images/gas_s.webp
+  src: /images/posts/gas_s.webp
   alt: Gas pump
 heroImage: 
-  src: /images/gas_h.webp
+  src: /images/posts/gas_h.webp
   alt: Gas pump
   attribution: Elijah Nouvelage, Getty Images
 authorKey: 2

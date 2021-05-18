@@ -1,0 +1,33 @@
+/*
+
+Hover
+
+*/
+a:hover,
+a:focus {
+  color: orangered;
+  text-decoration: none;
+}
+a:focus {
+  outline: 2px dotted;
+}
+input:focus {
+  box-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.5);
+}
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: 2px solid rgb(135, 205, 226);
+}
+.gallery-link:hover,
+.gallery-link:focus {
+  box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.25);
+  transform: scale(1.025);
+  filter: saturate(1);
+}
+.gallery-link:focus {
+  outline: 3px solid rgb(42, 147, 181);
+}
+footer a:hover,
+footer a:focus {
+  color: #ffbf00;
+}
