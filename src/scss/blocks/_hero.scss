@@ -2,7 +2,7 @@
   display: grid;
   grid-template-areas: "hero";
   place-items: center;
-  height: var(--height, 90vh);
+  height: var(--height, 50vh);
   max-height: 600px;
   background-color: var(--hero-background-color);
   overflow: hidden;
@@ -13,7 +13,7 @@
 
   .hero__img {
     object-fit: cover;
-    height: var(--height, 90vh);
+    height: var(--height, 50vh);
     // Chrome no longer preventing growing beyond
     // the header height with just the following
     height: 100%;
@@ -58,5 +58,9 @@
         text-decoration: none;
       }
     }
+  }
+
+  @media screen and (min-width: 900px) {
+    --height: 90vh;
   }
 }

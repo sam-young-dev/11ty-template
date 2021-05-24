@@ -1,7 +1,7 @@
 {% extends 'layouts/base.njk' %}
 
 {% set author = helpers.filterCollectionByKey(collections.people, authorKey) %}
-
+  
 {% block content %}
 <div class="[ post ] [ wrapper ] [ flow ]">
   <div class="[ prose insulate additive-spacing ]">
@@ -14,14 +14,6 @@
       <div class="hero">
         <img class="hero__img" src={{ heroImage.src }} alt={{ heroImage.alt }} />
       </div>
-
-      <!-- <p class="post__meta">
-        {% if date %}
-        Posted by {{ author }}
-        on <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | longDateFilter }}</time>
-        {% endif %} (about a {{ helpers.getReadingTime(content) }} minute read).
-      </p>
-      <div class="hr"></div> -->
  
       <div class="article__meta">
         <div class="article__author font--sans text--xs">
@@ -49,8 +41,8 @@
       {{ content | safe }}
     </div>
   </div>
- 
-  <div class="wrap">
+     
+  <div class="">
     <footer class="post__footer">
       {% if tags %}  
       <p class="post-tag-heading">Filed To:</p>
