@@ -55,29 +55,32 @@
   }
   
   &__footer {
-    display: flex;
-    align-items: center;
-
+    
     .post-tags {
       display: flex;
-    }
+      align-items: center;
+
+      &__heading {
+        font-weight: bold;
+        font-size: var(--step--2);
+        margin-right: var(--step--4);
+      }
+
+      &__list {
+        display: flex;
+      }
+
+      &__list-item {
+        font-size: var(--step--2);
   
-    .post-tag-heading {
-      font-weight: bold;
-      font-size: var(--step--2);
-      margin-right: var(--step--4);
-    }
-  
-    .post-tag {
-      font-size: var(--step--2);
-  
-      &:not(:last-child):after {
-        content: "•";
-        margin: 0;
-        padding: 0;
-  
-        margin: 0 var(--step--5);
-        color: var(--gray-500);
+        &:not(:last-child):after {
+          content: "•";
+          margin: 0;
+          padding: 0;
+    
+          margin: 0 var(--step--5);
+          color: var(--gray-500);
+        }
       }
     }
   }
@@ -137,50 +140,14 @@
   .has-dropcap > p:first-of-type:first-letter {
     float: left;
     font-size: var(--step-5);
+    font-weight: 700;
     line-height: 0.65;
-    margin: 0.1em 0.1em 0.2em 0;
+    margin: .1em .15em 0 0;
   }
-}
 
-
-
-.has-dropcap:first-letter {
-  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-  float: left;
-  font-size: 6rem;
-  line-height: 0.65;
-  margin: 0.1em 0.1em 0.2em 0;
-}
-
-.dropcap {
-  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-  background: #303030;
-  color: #FDF9F2;
-  float: left;
-  font-size: 6rem;
-  line-height: 1;
-  margin: 0.1em 0.1em 0.2em 0;
-  padding: 0.1em;
-}
-.dropcap:before,
-.dropcap:after {
-  content: "";
-  display: block;
-}
-.dropcap:before {
-  margin-top: -0.2em;
-}
-.dropcap:after {
-  margin-bottom: -0.15em;
-}
-
-/* https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
-.sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap; 
-  width: 1px;
+  @media screen and (min-width: 900px) {
+    .has-dropcap > p:first-of-type:first-letter {
+      margin: -.05em .2em 0 0;
+    }
+  }
 }
