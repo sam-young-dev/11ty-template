@@ -42,20 +42,20 @@
     </div>
   </div>
      
-  <div class="">
-    <footer class="post__footer">
+  <footer class="[ post__footer ] [ wrap ]">
+    <div class="post-tags">
       {% if tags %}  
-      <p class="post-tag-heading">Filed To:</p>
-      <ul class="post-tags">
+      <p class="post-tags__heading">Filed To:</p>
+      <ul class="post-tags__list">
         {% for item in tags %} 
-        <li class="post-tag"> 
+        <li class="post-tags__list-item"> 
           <a class=" link" href="/{{ item }}">{{ item }}</a>
         </li> 
         {% endfor %}
       </ul>
       {% endif %}
-    </footer>
+    </div>
     <p class="attribution">Lead Photo: {{ heroImage.attribution }}</p>
-  </div>
+  </footer>
 </div>
 {% endblock %}

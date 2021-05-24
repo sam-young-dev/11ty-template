@@ -55,29 +55,32 @@
   }
   
   &__footer {
-    display: flex;
-    align-items: center;
-
+    
     .post-tags {
       display: flex;
-    }
+      align-items: center;
+
+      &__heading {
+        font-weight: bold;
+        font-size: var(--step--2);
+        margin-right: var(--step--4);
+      }
+
+      &__list {
+        display: flex;
+      }
+
+      &__list-item {
+        font-size: var(--step--2);
   
-    .post-tag-heading {
-      font-weight: bold;
-      font-size: var(--step--2);
-      margin-right: var(--step--4);
-    }
-  
-    .post-tag {
-      font-size: var(--step--2);
-  
-      &:not(:last-child):after {
-        content: "•";
-        margin: 0;
-        padding: 0;
-  
-        margin: 0 var(--step--5);
-        color: var(--gray-500);
+        &:not(:last-child):after {
+          content: "•";
+          margin: 0;
+          padding: 0;
+    
+          margin: 0 var(--step--5);
+          color: var(--gray-500);
+        }
       }
     }
   }
