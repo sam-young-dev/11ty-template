@@ -1,6 +1,7 @@
 {% extends 'layouts/base.njk' %}
 
 {% set featuredPosts = collections.featuredPosts %}
+{% set magazinePosts = collections.magazineFeed %}
 {% set postListItems = collections.postFeed %}
 {% set introHeading = "Latest" %}
 {% set posts = collections.posts %}
@@ -35,5 +36,9 @@
   </div>
   
   {% include 'partials/components/read-more-cta.njk' %}
+
+  {% set introHeading = "Magazine" %}
+  {% include 'partials/components/section-intro.njk' %}
+  {% include 'partials/components/magazine-cta.njk' %}
 </div>
 {% endblock %}

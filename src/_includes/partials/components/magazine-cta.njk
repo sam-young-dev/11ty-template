@@ -1,0 +1,25 @@
+<div class="[ magazine ] [ hero ]">
+  <div class="[ magazine__content ] [ flow ]">
+    <article class="magazine__content-item">
+      <h2>Outside Magazine</h2>
+      <p>IN THIS ISSUE</p>
+      
+      <ul class="magazine__post">
+        {% for post in magazinePosts %}
+        <li class="magazine__post-item">
+          <a class="magazine__post-item__link link-secondary" href={{ post.url }}>{{ post.data.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+   
+      <a href="/subscribe" class="btn">Subscribe</a>
+    </article>
+    <div class="magazine__content-item">
+      <a href="/subscribe">
+        <img src={{ magazineCover.src }} alt={{ magazineCover.alt }}>
+      </a>
+    </div>
+  </div>
+   
+  <img class="hero__img" src={{ magzineImage.src }} alt={{ magzineImage.alt }} />
+</div>

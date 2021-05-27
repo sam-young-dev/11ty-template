@@ -1,0 +1,99 @@
+{% extends 'layouts/base.njk' %}
+
+{% set introHeading = "Outside Magazine" %}
+
+
+{% block content %} 
+<div class="[ subscribe ] [ flow ]">
+  <div class="wrapper">
+    <img class="outside-logo" src={{ outsideLogo.src }} alt={{ outsideLogo.alt }}>
+  </div>
+  <div class="[ subscribe__heading ] [ text-center ]">
+    <div class="wrapper">
+      <h1>Subscribe and Save 69% Off the Cover Price!</h1>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <img src={{ magazineCovers.src }} alt={{ magazineCovers.alt }}>
+  
+    <h2>Choose an offer</h2>
+    <div class="flow">
+      <form name="subscribe" action="/thank-you" data-netlify="true" class="[ form ] [ flow ]" netlify-honeypot="bot-field">
+        <article class="subscribe__card">
+          <input type="radio" name="subscribe" id="twoYears" value="2">
+          <label for="twoYears">Best Offer: 2 Years for $36.00</label>
+          <p>Print + Digital</p>
+          <ul>
+            <li>2 years of <em>Outside</em> Magazine Print Edition – 72% OFF the cover price</li>
+            <li>2 years of <em>Outside</em> Magazine Digital Edition</li>
+            <li>2 Winter Buyer's Guides – <span class="text-secondary">FREE</span></li>
+            <li>2 Summer Buyer's Guides – <span class="text-secondary">FREE</span></li>
+            <li>INSTANT ACCESS to the current issue of <em>Outside</em> – <span class="text-secondary">ALL NEW</span>!</li>
+          </ul>
+        </article>
+    
+        <article class="subscribe__card">
+          <input type="radio" name="subscribe" id="oneYear" value="1">
+          <label for="oneYear">1 year for $24.00</label>
+          <p>Print + Digital</p>
+          <ul> 
+            <li>1 year of <em>Outside</em> Magazine Print Edition</li>
+            <li>1 year of <em>Outside</em> Magazine Digital Edition</li>
+            <li>1 Winter Buyer's Guide – <span class="text-secondary">FREE</span></li>
+            <li>1 Summer Buyer's Guide – <span class="text-secondary">FREE</span></li>
+            <li>INSTANT ACCESS to the current issue of <em>Outside</em> – <span class="text-secondary">ALL NEW</span>!</li>
+          </ul>
+        </article>
+    
+        <h4>Your Information</h4>
+
+        <label for="name">Name</label>
+        <input type="text" id="name"><br>
+
+        <label for="email">Email Address</label>
+        <input type="text" id="email"><br>
+
+        <label for="address1">Address Line 1</label>
+        <input type="text" id="address1"><br>
+
+        <label for="address2">Address Line 2</label>
+        <input type="text" id="address2"><br>
+
+        <label for="city">City</label>
+        <input type="text" id="city">
+
+        <label for="name">State</label>
+        <select name="state" id="state">
+          <option value="TN">TN</option>
+          <option value="AL">AL</option>
+          <option value="NY">NY</option>
+        </select>
+
+        <label for="zip">Zip</label>
+        <input type="text" id="zip">
+
+        <h4>Payment Information</h4>
+ 
+        <label for="cardNumber">Credit Card #</label>
+        <input type="text" id="cardNumber">
+
+        <label for="expiration">Expiration</label>
+        <input type="text" id="expiration">
+
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv">
+
+        <p class="visually-hidden">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+ 
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+ 
+      <p><small><strong>Terms & Conditions:</strong> Savings % based on annual cover price of $57.84. Outside is published six times per year, subject to change at any time. An annual subscription includes two Buyer's Guides. Subscribers: If the Post Office alerts us that your magazine is undeliverable, we have no further obligation unless we receive a corrected address within one year.</small></p>
+      <p><small><strong>Outside's Continuous Service Renewal Guarantee:</strong> Your personal subscription will be automatically renewed, unless you tell us to stop. Before each renewal, you will be sent a reminder stating the renewal prices in effect. If a valid credit/debit card is on file, it will be charged. Otherwise we will send you an invoice for your subscription. Cancel anytime for a 100% refund on unmailed issues. You may manage your subscription at any time by visiting outsideonline.com/customerservice.</small></p>
+    </div>
+  </div>
+</div>
+{% endblock %}
