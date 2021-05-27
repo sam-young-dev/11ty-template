@@ -56,6 +56,14 @@ module.exports = function(config) {
     .slice(0, site.postsPerPage);
   });
 
+  config.addCollection("magazineFeed", collection => {
+    return [
+      ...collection.getFilteredByGlob("./src/posts/*.md").filter(livePosts)
+    ]
+    .reverse()
+    .slice(0, 3);
+  });
+
   // Returns a list of people ordered by filename
   config.addCollection('people', collection => {
     return collection.getFilteredByGlob('./src/people/*.md').sort((a, b) => {
