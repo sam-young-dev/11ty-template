@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env ELEVENTY_ENV=development npx eleventy clean && eleventy --serve",
-    "build": "npx eleventy"
+    "build": "npx eleventy",
+    "postinstall": "netlify-lambda install"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +29,7 @@
     "lozad": "^1.14.0",
     "memfs": "^3.1.2",
     "netlify-cli": "^3.29.16",
+    "netlify-lambda": "^2.0.7",
     "node-sass": "^6.0.0",
     "slugify": "^1.4.0",
     "snarkdown": "^1.2.2",
