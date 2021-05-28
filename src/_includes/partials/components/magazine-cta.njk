@@ -1,17 +1,17 @@
 <div class="[ magazine ] [ hero ]">
   <div class="[ magazine__content ] [ flow ]">
-    <article class="magazine__content-item">
+    <article class="magazine__content-item [ flow ]">
       <h2>Outside Magazine</h2>
-      <p>IN THIS ISSUE</p>
-      
+      <p class="subtitle">IN THIS ISSUE</p>
+       
       <ul class="magazine__post">
         {% for post in magazinePosts %}
         <li class="magazine__post-item">
-          <a class="magazine__post-item__link link-secondary" href={{ post.url }}>{{ post.data.title }}</a>
+          <a class="magazine__post-item__link" href={{ post.url }}>{{ post.data.title }}</a>
         </li>
         {% endfor %}
       </ul>
-   
+
       <a href="/subscribe" class="btn">Subscribe</a>
     </article>
     <div class="magazine__content-item">

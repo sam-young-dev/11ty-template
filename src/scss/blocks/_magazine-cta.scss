@@ -10,27 +10,32 @@
     color: #fff;
     padding: 1rem;
     background: transparent;
+  }
 
-    &-item {
-      // display: grid;
-      // place-items: center;
-    }
-
-    .magazine__content-item + .magazine__content-item {
-      // margin-top: 2rem;
-    }
+  .subtitle {
+    font-family: var(--font-sans);   
   }
 
   &__post {
-    // margin-left: 0;
-    // padding-left: 0;
-
     &-item {
       list-style-type: none;
       
       &__link {
-        color: white;     
+        color: white; 
+        text-decoration: none; 
+
+        &:hover {
+          color: var(--primary);
+        }
       }
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    --hero-height: 90vh;
+
+    .magazine__content-item + .magazine__content-item {
+      margin-left: 2rem;
     }
   }
 }
